@@ -1,0 +1,11 @@
+{
+  "name": "PHP 8.3 Laravel 11 & Filament 3",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/php:1": {
+      "version": "8.2",
+      "extensions": ["intl"]
+    }
+  },
+  "postCreateCommand": "docker-php-ext-install intl && composer create-project --prefer-dist laravel/laravel:^11.0 filament && cd my-laravel-app && composer require filament/filament:^3.0"
+}
